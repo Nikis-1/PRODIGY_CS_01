@@ -25,7 +25,7 @@ public class CaesarCipher {
 public static String pythonencrypt(String text,String key){
     String result=" ";
     try{
-    ProcessBuilder pb = new ProcessBuilder("C:\\Users\\Ekta\\AppData\\Local\\Programs\\Python\\Python312\\python.exe","CaesarCipher.py","encrypt",text,key);
+    ProcessBuilder pb = new ProcessBuilder("Python3","CaesarCipher.py","encrypt",text,key);
     pb.redirectErrorStream(true);
     Process p = pb.start();
     BufferedReader b = new BufferedReader(new InputStreamReader(p.getInputStream()));
@@ -44,7 +44,7 @@ public static String pythonencrypt(String text,String key){
 public static String pythondecrypt(String text,String key){
     String result="";
     try{
-    ProcessBuilder pb = new ProcessBuilder("C:\\Users\\Ekta\\AppData\\Local\\Programs\\Python\\Python312\\python.exe","CaesarCipher.py","decrypt",text,key);
+    ProcessBuilder pb = new ProcessBuilder("Python3","CaesarCipher.py","decrypt",text,key);
     pb.redirectErrorStream(true);
     Process p = pb.start();
     BufferedReader b = new BufferedReader(new InputStreamReader(p.getInputStream()));
